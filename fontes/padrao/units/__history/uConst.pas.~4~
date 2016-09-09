@@ -1,0 +1,34 @@
+unit uConst;
+
+interface
+
+const
+  // Operações DML (Insert/Update/Delete)
+  C_INSERT = 1;
+  C_UPDATE = 2;
+  C_DELETE = 3;
+  C_BROWSE = 4;
+
+  // Campos da Grid
+  C_PADRAO = 0;
+  C_CONFIG = 1;
+  C_NVISIV = 2;
+
+  // Sim/Nao Boolean
+  C_NAO = 0;
+  C_SIM = 1;
+
+var
+
+  // Usada para informar a Grid que houve solicitacao de busca para Transferir
+  V_Transf : Boolean = False;
+
+  // Tamanho o form Grid
+  V_Grid_Width: integer;
+  V_Grid_Height: integer;
+  V_Grid_Top: integer;
+  V_Grid_Left: integer;
+
+implementation
+
+end.

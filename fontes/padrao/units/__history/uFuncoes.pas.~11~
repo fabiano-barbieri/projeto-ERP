@@ -1,0 +1,20 @@
+unit uFuncoes;
+
+interface
+
+uses Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Buttons, ExtCtrls, ComCtrls, FMTBcd, DB, Provider,
+  DBClient, SqlExpr, ACBrEnterTab, DBCtrls, uCadastros;
+
+procedure criarFormAncorado(TfCad:TfrmCadastros; var fCad);
+
+implementation
+
+
+procedure criarFormAncorado(TfCad:TfrmCadastros; var fCad);
+begin
+  Application.CreateForm(TfCad,fCad);
+  Tform(fCad)
+end;
+
+end.

@@ -1,0 +1,45 @@
+unit frmGrids;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Buttons, ExtCtrls, Grids, DBGrids;
+
+type
+  TfrmGrids = class(TForm)
+    pnlBotoes: TPanel;
+    Botao_Primeiro: TBitBtn;
+    Botao_Proximo: TBitBtn;
+    Botao_Anterior: TBitBtn;
+    Botao_Ultimo: TBitBtn;
+    Botao_Novo: TBitBtn;
+    Botao_Alterar: TBitBtn;
+    Botao_Excluir: TBitBtn;
+    Botao_Visualizar: TBitBtn;
+    Botao_Sair: TBitBtn;
+    pnlFiltros: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    cboCampos: TComboBox;
+    ComboBox2: TComboBox;
+    txtTexto: TEdit;
+    Botao_Pesquisar: TBitBtn;
+    pnlGrid: TPanel;
+    pnlQtde: TPanel;
+    DBGrid1: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmGrids: TfrmGrids;
+
+implementation
+
+{$R *.dfm}
+
+end.

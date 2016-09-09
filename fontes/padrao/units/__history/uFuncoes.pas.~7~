@@ -1,0 +1,22 @@
+unit uFuncoes;
+
+interface
+
+uses Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Buttons, ExtCtrls, ComCtrls, FMTBcd, DB, Provider,
+  DBClient, SqlExpr, ACBrEnterTab, DBCtrls;
+
+procedure criarGridCad(fGrid: TFormClass; tabela: string);
+
+implementation
+
+procedure criarGridCad(fGrid: TFormClass; tabela: string);
+begin
+  try
+    TForm(fGrid) := fGrid.Create(Application);
+  except
+    FreeAndNil(fGrid);
+  end;
+end;
+
+end.

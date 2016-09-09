@@ -1,0 +1,164 @@
+object frmGrids: TfrmGrids
+  Left = 0
+  Top = 0
+  Caption = 'Grid'
+  ClientHeight = 571
+  ClientWidth = 871
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlBotoes: TPanel
+    Left = 0
+    Top = 0
+    Width = 871
+    Height = 51
+    Align = alTop
+    BorderStyle = bsSingle
+    TabOrder = 0
+    ExplicitWidth = 916
+    DesignSize = (
+      867
+      47)
+    object Botao_Novo: TBitBtn
+      Left = 0
+      Top = 0
+      Width = 90
+      Height = 45
+      Hint = 'Novo Registro'
+      DoubleBuffered = True
+      ParentDoubleBuffered = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object Botao_Alterar: TBitBtn
+      Left = 90
+      Top = 0
+      Width = 90
+      Height = 45
+      Hint = 'Alterar Registro'
+      DoubleBuffered = True
+      ParentDoubleBuffered = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object Botao_Excluir: TBitBtn
+      Left = 180
+      Top = 0
+      Width = 90
+      Height = 45
+      Hint = 'Excluir Registro'
+      DoubleBuffered = True
+      ParentDoubleBuffered = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+    end
+    object Botao_Visualizar: TBitBtn
+      Left = 270
+      Top = 0
+      Width = 90
+      Height = 45
+      Hint = 'Visualizar Registro'
+      DoubleBuffered = True
+      ParentDoubleBuffered = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+    end
+    object Botao_Sair: TBitBtn
+      Left = 774
+      Top = 0
+      Width = 90
+      Height = 45
+      Hint = 'Sair'
+      Anchors = [akTop, akRight]
+      DoubleBuffered = True
+      ParentDoubleBuffered = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+    end
+    object Botao_Pesquisar: TBitBtn
+      Left = 360
+      Top = 0
+      Width = 90
+      Height = 45
+      Hint = 'Pesquisar Registro'
+      DoubleBuffered = True
+      ParentDoubleBuffered = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+    end
+  end
+  object pnlFiltros: TPanel
+    Left = 0
+    Top = 51
+    Width = 871
+    Height = 41
+    Align = alTop
+    BorderStyle = bsSingle
+    TabOrder = 1
+    ExplicitWidth = 916
+    object Label2: TLabel
+      Left = 2
+      Top = 12
+      Width = 28
+      Height = 13
+      Caption = 'Filtro:'
+    end
+    object Label3: TLabel
+      Left = 199
+      Top = 12
+      Width = 32
+      Height = 13
+      Caption = 'Texto:'
+    end
+    object cboFiltro: TComboBox
+      Left = 34
+      Top = 7
+      Width = 145
+      Height = 21
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object txtTexto: TEdit
+      Left = 240
+      Top = 7
+      Width = 265
+      Height = 21
+      TabOrder = 1
+    end
+  end
+  object pnlGrid: TPanel
+    Left = 0
+    Top = 92
+    Width = 871
+    Height = 479
+    Align = alClient
+    BorderStyle = bsSingle
+    TabOrder = 2
+    ExplicitWidth = 916
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 865
+      Height = 473
+      Align = alClient
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+    end
+  end
+end

@@ -1,0 +1,52 @@
+unit frmGrids;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Buttons, ExtCtrls, Grids, DBGrids, ComCtrls, ToolWin;
+
+type
+  TfrmGrids = class(TForm)
+    pnlBotoes: TPanel;
+    pnlFiltros: TPanel;
+    Label2: TLabel;
+    Label3: TLabel;
+    cboFiltro: TComboBox;
+    txtTexto: TEdit;
+    pnlGrid: TPanel;
+    DBGrid1: TDBGrid;
+    ToolBar1: TToolBar;
+    botao_Insert: TToolButton;
+    botao_Update: TToolButton;
+    botao_Delete: TToolButton;
+    botao_View: TToolButton;
+    ToolButton1: TToolButton;
+    botao_Report: TToolButton;
+    botao_Print: TToolButton;
+    botao_Excel: TToolButton;
+    ToolButton2: TToolButton;
+    botao_Aux1: TToolButton;
+    botao_Aux2: TToolButton;
+    botao_Aux3: TToolButton;
+    ToolButton6: TToolButton;
+    botao_Config: TToolButton;
+    botao_Help: TToolButton;
+    botao_Sair: TToolButton;
+    StatusBar1: TStatusBar;
+    ToolButton3: TToolButton;
+    botao_Transf: TToolButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fGrids : TfrmGrids;
+
+implementation
+
+{$R *.dfm}
+
+end.

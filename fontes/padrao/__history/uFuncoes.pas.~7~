@@ -1,0 +1,22 @@
+unit uFuncoes;
+
+interface
+
+uses Provider, SqlExpr, DBClient, DB;
+
+implementation
+
+// Constante para operações de banco de dados
+Const ST_INSERT: integer = 0;
+Const ST_EDIT: integer   = 1;
+Const ST_DELETE: integer = 2;
+Const ST_VIEW: integer = 3;
+
+var
+  //Variaveis de Conexao com banco de dados
+  cds_Cad : TClientDataSet;
+  ds_Cad : TDataSource;
+  dsp_Cad : TDataSetProvider;
+  qry_Cad : TSQLQuery;
+
+end.

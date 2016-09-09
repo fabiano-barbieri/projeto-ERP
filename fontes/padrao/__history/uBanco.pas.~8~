@@ -1,0 +1,22 @@
+unit uBanco;
+
+interface
+
+//uses Provider, SqlExpr, DBClient, DB, Forms;
+
+implementation
+
+// Constante para operações de banco de dados
+Const
+  ST_INSERT: integer = 0;
+
+Const
+  ST_EDIT: integer = 1;
+
+Const
+  ST_DELETE: integer = 2;
+
+Const
+  ST_VIEW: integer = 3;
+
+end.

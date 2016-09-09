@@ -1,0 +1,249 @@
+object frmGrids: TfrmGrids
+  Left = 0
+  Top = 0
+  Caption = 'Grid'
+  ClientHeight = 571
+  ClientWidth = 850
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlBotoes: TPanel
+    Left = 0
+    Top = 0
+    Width = 850
+    Height = 50
+    Align = alTop
+    BorderStyle = bsSingle
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Left = 1
+      Top = 1
+      Width = 844
+      Height = 50
+      ButtonHeight = 45
+      ButtonWidth = 50
+      TabOrder = 0
+      object botao_Insert: TToolButton
+        Left = 0
+        Top = 0
+        Caption = 'botao_Insert'
+        ImageIndex = 0
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object botao_Update: TToolButton
+        Left = 50
+        Top = 0
+        Caption = 'botao_Update'
+        ImageIndex = 1
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object botao_Delete: TToolButton
+        Left = 100
+        Top = 0
+        Caption = 'botao_Delete'
+        ImageIndex = 2
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object botao_View: TToolButton
+        Left = 150
+        Top = 0
+        Caption = 'botao_View'
+        ImageIndex = 3
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object ToolButton1: TToolButton
+        Left = 200
+        Top = 0
+        Width = 8
+        Caption = 'ToolButton1'
+        ImageIndex = 4
+        Style = tbsSeparator
+      end
+      object botao_Report: TToolButton
+        Left = 208
+        Top = 0
+        Caption = 'botao_Report'
+        ImageIndex = 4
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object botao_Print: TToolButton
+        Left = 258
+        Top = 0
+        Caption = 'botao_Print'
+        ImageIndex = 5
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object botao_Excel: TToolButton
+        Left = 308
+        Top = 0
+        Caption = 'botao_Excel'
+        ImageIndex = 6
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object ToolButton2: TToolButton
+        Left = 358
+        Top = 0
+        Width = 8
+        Caption = 'ToolButton2'
+        ImageIndex = 7
+        Style = tbsSeparator
+      end
+      object botao_Aux1: TToolButton
+        Left = 366
+        Top = 0
+        Caption = 'botao_Aux1'
+        ImageIndex = 7
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object botao_Aux2: TToolButton
+        Left = 416
+        Top = 0
+        Caption = 'botao_Aux2'
+        ImageIndex = 8
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object botao_Aux3: TToolButton
+        Left = 466
+        Top = 0
+        Caption = 'botao_Aux3'
+        ImageIndex = 9
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object ToolButton6: TToolButton
+        Left = 516
+        Top = 0
+        Width = 8
+        Caption = 'ToolButton6'
+        ImageIndex = 10
+        Style = tbsSeparator
+      end
+      object botao_Config: TToolButton
+        Left = 524
+        Top = 0
+        Caption = 'botao_Config'
+        ImageIndex = 10
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object botao_Help: TToolButton
+        Left = 574
+        Top = 0
+        Caption = 'botao_Help'
+        ImageIndex = 11
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object botao_Transf: TToolButton
+        Left = 624
+        Top = 0
+        Caption = 'botao_Transf'
+        ImageIndex = 13
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object ToolButton3: TToolButton
+        Left = 674
+        Top = 0
+        Width = 8
+        Caption = 'ToolButton3'
+        ImageIndex = 13
+        Style = tbsSeparator
+      end
+      object botao_Sair: TToolButton
+        Left = 682
+        Top = 0
+        Caption = 'botao_Sair'
+        ImageIndex = 12
+        ParentShowHint = False
+        ShowHint = True
+      end
+    end
+  end
+  object pnlFiltros: TPanel
+    Left = 0
+    Top = 50
+    Width = 850
+    Height = 41
+    Align = alTop
+    BorderStyle = bsSingle
+    TabOrder = 1
+    object Label2: TLabel
+      Left = 2
+      Top = 12
+      Width = 28
+      Height = 13
+      Caption = 'Filtro:'
+    end
+    object Label3: TLabel
+      Left = 199
+      Top = 12
+      Width = 32
+      Height = 13
+      Caption = 'Texto:'
+    end
+    object cboFiltro: TComboBox
+      Left = 34
+      Top = 7
+      Width = 145
+      Height = 21
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object txtTexto: TEdit
+      Left = 240
+      Top = 7
+      Width = 265
+      Height = 21
+      TabOrder = 1
+    end
+  end
+  object pnlGrid: TPanel
+    Left = 0
+    Top = 91
+    Width = 850
+    Height = 480
+    Align = alClient
+    BorderStyle = bsSingle
+    TabOrder = 2
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 844
+      Height = 449
+      Align = alClient
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+    end
+    object StatusBar1: TStatusBar
+      Left = 1
+      Top = 450
+      Width = 844
+      Height = 25
+      Panels = <>
+    end
+  end
+  object img_botoes: TImageList
+    Left = 32
+    Top = 152
+  end
+end

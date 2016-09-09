@@ -1,0 +1,244 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{8FC132C3-8D8B-441D-B468-F0ABFB57FFD5}</ProjectGuid>
+			<MainSource>Project1.dpr</MainSource>
+			<ProjectVersion>12.2</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vclx;vcl;VclSmp;rtl;vclimg;svnui;svn;bdertl;TeeUI;TeeDB;Tee;vclactnband;vcldb;dbrtl;vcldbx;vcltouch;xmlrtl;dsnap;dsnapcon;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_110_150;Intraweb_110_150;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapClient;dbxcds;DataSnapServer;AzureCloud;DBXInterBaseDriver;DBXMySQLDriver;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;CodeSiteExpressVcl;Rave90VCL;ACBr_Comum;ACBr_synapse;ACBr_OpenSSL;ACBr_Diversos;ACBr_Serial;ACBr_Convenio115;ACBr_TXTComum;ACBr_LFD;ACBr_PAF;ACBr_SEF2;ACBr_PCNComum;ACBr_Sintegra;ACBr_SPED;ACBr_SPEDImportar;ACBR_DeSTDA;ACBr_Ponto;ACBr_TCP;ACBr_Boleto;ACBr_NFe;ACBr_DFeComum;ACBr_NFCeECFVirtual;ACBr_NFeDanfeESCPOS;ACBr_CTe;ACBr_NFSe;ACBr_MDFe;ACBr_GNRE;ACBr_SAT;ACBr_SATECFVirtual;ACBr_SATExtratoESCPOS;ACBr_BlocoX;ACBr_TEFD;dxCoreRS15;cxLibraryRS15;dxGDIPlusRS15;dxThemeRS15;dxDBXServerModeRS15</DCC_UsePackage>
+			<DCC_DcuOutput>.\$(Config)\$(Platform)</DCC_DcuOutput>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_ExeOutput>.\$(Config)\$(Platform)</DCC_ExeOutput>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_K>false</DCC_K>
+			<DCC_E>false</DCC_E>
+			<DCC_F>false</DCC_F>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BRCC_IncludePath>C:\componentes\SPFieldsProfile;$(BRCC_IncludePath)</BRCC_IncludePath>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="Project1.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="Unit1.pas">
+				<Form>fGridBanco</Form>
+			</DCCReference>
+			<DCCReference Include="Unit2.pas">
+				<Form>fCadBanco</Form>
+			</DCCReference>
+			<DCCReference Include="udm.pas">
+				<Form>dmodule</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="C:\ERP\fontes\padrao\forms\UAssistente_Filtro.pas">
+				<Form>FrAssistenteFiltro</Form>
+			</DCCReference>
+			<DCCReference Include="C:\ERP\fontes\padrao\forms\uCadastros.pas">
+				<Form>frmCadastros</Form>
+			</DCCReference>
+			<DCCReference Include="C:\ERP\fontes\padrao\forms\uGrids.pas">
+				<Form>frmGrids</Form>
+			</DCCReference>
+			<DCCReference Include="C:\ERP\fontes\padrao\forms\UMensagem.pas">
+				<Form>FrMensagem</Form>
+			</DCCReference>
+			<DCCReference Include="C:\ERP\fontes\padrao\forms\UMenu.pas">
+				<Form>FrMenu</Form>
+			</DCCReference>
+			<DCCReference Include="C:\ERP\fontes\padrao\units\uBanco.pas"/>
+			<DCCReference Include="C:\ERP\fontes\padrao\units\uConst.pas"/>
+			<DCCReference Include="C:\ERP\fontes\padrao\units\uFuncoes.pas"/>
+			<DCCReference Include="C:\ERP\fontes\padrao\forms\uValidarCampos.pas">
+				<Form>FrmValidarCampos</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Source>
+						<Source Name="MainSource">Project1.dpr</Source>
+					</Source>
+					<Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxSkinsDesignHelperRS15.bpl">ExpressSkins Library Uses Clause Auto Fill Helper by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinscxPCPainterRS15.bpl">ExpressSkins Library Painter for PageControl by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinscxSchedulerPainterRS15.bpl">ExpressSkins Library Painter for Scheduler by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinsdxBarPainterRS15.bpl">ExpressSkins Library Painter for Bars by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinsdxNavBarPainterRS15.bpl">ExpressSkins Library Painter for NavBar by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinsdxRibbonPainterRS15.bpl">ExpressSkins Library Painter for Ribbon by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinsdxDLPainterRS15.bpl">ExpressSkins Library Painter for Docking Library by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxSkinsCoreRS15.bpl">ExpressSkins Library by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxADOServerModeRS15.bpl">ADO Data Source for ExpressDataController Server Mode by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxEditorFieldLinkRS15.bpl">ExpressEditors FieldLink by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxWizardControlRS15.bpl">ExpressWizardControl by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxBarExtDBItemsRS15.bpl">ExpressBars extended DB items by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxBarExtItemsRS15.bpl">ExpressBars extended items by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxBarDBNavRS15.bpl">ExpressBars DBNavigator by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxTabbedMDIRS15.bpl">ExpressBars Tabbed MDI by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxTileControlRS15.bpl">ExpressTileControl by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxLayoutControlRS15.bpl">ExpressLayout Control by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxTreeListRS15.bpl">ExpressQuantumTreeList by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxGridRS15.bpl">ExpressQuantumGrid by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxVerticalGridRS15.bpl">ExpressVerticalGrid by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxmdsRS15.bpl">ExpressMemData by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxSpellCheckerRS15.bpl">ExpressSpellChecker 2 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxSpreadSheetRS15.bpl">ExpressSpreadSheet by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxDockingRS15.bpl">ExpressDocking Library by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxNavBarRS15.bpl">ExpressNavBar by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinBlackRS15.bpl">ExpressSkins - Black Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinBlueprintRS15.bpl">ExpressSkins - Blueprint Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinBlueRS15.bpl">ExpressSkins - Blue Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinCaramelRS15.bpl">ExpressSkins - Caramel Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinCoffeeRS15.bpl">ExpressSkins - Coffee Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinDarkRoomRS15.bpl">ExpressSkins - Darkroom Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinDarkSideRS15.bpl">ExpressSkins - DarkSide Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinDevExpressDarkStyleRS15.bpl">ExpressSkins - DevExpressDarkStyle Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinDevExpressStyleRS15.bpl">ExpressSkins - DevExpressStyle Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinFoggyRS15.bpl">ExpressSkins - Foggy Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinGlassOceansRS15.bpl">ExpressSkins - GlassOceans Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinHighContrastRS15.bpl">ExpressSkins - HighContrast Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkiniMaginaryRS15.bpl">ExpressSkins - iMaginary Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinLilianRS15.bpl">ExpressSkins - Lilian Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinLiquidSkyRS15.bpl">ExpressSkins - LiquidSky Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinLondonLiquidSkyRS15.bpl">ExpressSkins - LondonLiquidSky Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinMcSkinRS15.bpl">ExpressSkins - McSkin Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinMoneyTwinsRS15.bpl">ExpressSkins - MoneyTwins Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinOffice2007BlackRS15.bpl">ExpressSkins - Office2007Black Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinOffice2007BlueRS15.bpl">ExpressSkins - Office2007Blue Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinOffice2007GreenRS15.bpl">ExpressSkins - Office2007Green Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinOffice2007PinkRS15.bpl">ExpressSkins - Office2007Pink Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinOffice2007SilverRS15.bpl">ExpressSkins - Office2007Silver Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinOffice2010BlackRS15.bpl">ExpressSkins - Office2010Black Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinOffice2010BlueRS15.bpl">ExpressSkins - Office2010Blue Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinOffice2010SilverRS15.bpl">ExpressSkins - Office2010Silver Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinPumpkinRS15.bpl">ExpressSkins - Pumpkin Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinSevenClassicRS15.bpl">ExpressSkins - SevenClassic Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinSevenRS15.bpl">ExpressSkins - Seven Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinSharpPlusRS15.bpl">ExpressSkins - SharpPlus Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinSharpRS15.bpl">ExpressSkins - Sharp Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinSilverRS15.bpl">ExpressSkins - Silver Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinSpringTimeRS15.bpl">ExpressSkins - Springtime Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinStardustRS15.bpl">ExpressSkins - Stardust Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinSummer2008RS15.bpl">ExpressSkins - Summer2008 Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinTheAsphaltWorldRS15.bpl">ExpressSkins - TheAsphaltWorld Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinValentineRS15.bpl">ExpressSkins - Valentine Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinVS2010RS15.bpl">ExpressSkins - VS2010 Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinWhiteprintRS15.bpl">ExpressSkins - Whiteprint Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxSkinXmas2008BlueRS15.bpl">ExpressSkins - Xmas2008Blue Skin by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPSLnksRS15.bpl">ExpressPrinting System ReportLinks (Standard) by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPSDBTeeChartRS15.bpl">ExpressPrinting System ReportLink for DBTeeChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dxPScxPCProdRS15.bpl">ExpressPrinting System ContainerProducer for ExpressPageControl by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxPivotGridOLAPRS15.bpl">ExpressPivotGrid OLAP by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxdbtrRS15.bpl">ExpressDBTree by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxtrmdRS15.bpl">ExpressTreePrintedDataSet by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxDBOrRS15.bpl">ExpressDBOrgChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxFlowChartRS15.bpl">ExpressFlowChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxPageControldxBarPopupMenuRS15.bpl">ExpressPageControl dxBar Popup Menu by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxBarEditItemRS15.bpl">ExpressBars cxEditor item by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxSchedulerGridRS15.bpl">ExpressScheduler connection to ExpressQuantumGrid by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxSchedulerTreeBrowserRS15.bpl">ExpressScheduler tree browser by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxTreeListdxBarPopupMenuRS15.bpl">ExpressQuantumTreeList dxBar Built-In Menu by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxSkinscxEditorsHelperRS15.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for ExpressEditors by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxSkinscxPCPainterRS15.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for PageControl Painter by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxSkinscxSchedulerPainterRS15.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for Scheduler Painter by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxSkinsdxBarsPaintersRS15.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for Bars Painters by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxSkinsdxNavBarPainterRS15.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for NavBar Painter by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxSkinsdxRibbonPaintersRS15.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for Ribbon Painters by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPScxCommonRS15.bpl">ExpressPrinting System Cross Platform Library by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPScxExtCommonRS15.bpl">ExpressPrinting System Extended Cross Platform Library by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPScxPivotGridLnkRS15.bpl">ExpressPrinting System ReportLink for ExpressPivotGrid by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPScxSchedulerLnkRS15.bpl">ExpressPrinting System ReportLink for ExpressScheduler by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPScxSSLnkRS15.bpl">ExpressPrinting System ReportLink for ExpressSpreadSheet by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPScxTLLnkRS15.bpl">ExpressPrinting System ReportLink for ExpressQuantumTreeList by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPScxVGridLnkRS15.bpl">ExpressPrinting System ReportLink for ExpressVerticalGrid by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPSdxDBOCLnkRS15.bpl">ExpressPrinting System ReportLinks for ExpressDBOrgChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPSdxDBTVLnkRS15.bpl">ExpressPrinting System ReportLink for ExpressDBTree by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPSdxFCLnkRS15.bpl">ExpressPrinting System ReportLinks for ExpressFlowChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPScxGridLnkRS15.bpl">ExpressPrinting System ReportLink for ExpressQuantumGrid by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPSdxOCLnkRS15.bpl">ExpressPrinting System ReportLinks for ExpressOrgChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPSPrVwAdvRS15.bpl">ExpressPrinting System Advanced Preview Window by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dcldxPSPrVwRibbonRS15.bpl">ExpressPrinting System Ribbon Preview Window by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\DevExpress VCL\Library\RS15\dclcxPivotGridChartRS15.bpl">ExpressPivotGrid connection to ExpressQuantumGrid Chart View by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k150.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp150.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

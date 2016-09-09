@@ -1,0 +1,18 @@
+unit uBanco;
+
+interface
+
+//uses Provider, SqlExpr, DBClient, DB, Forms;
+
+implementation
+
+
+const
+
+// Operações de banco de dados
+  ST_INSERT = 0;
+  ST_EDIT = 1;
+  ST_DELETE = 2;
+  ST_VIEW = 3;
+
+end.

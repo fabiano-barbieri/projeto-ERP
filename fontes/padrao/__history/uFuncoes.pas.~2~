@@ -1,0 +1,13 @@
+unit uFuncoes;
+
+interface
+
+// Constante para operações de banco de dados
+Const ST_INSERT = 0;
+Const ST_EDIT   = 1;
+Const ST_DELETE = 2;
+Const ST_VIEW   = 3;
+
+implementation
+
+end.

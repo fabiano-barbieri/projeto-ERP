@@ -1,0 +1,45 @@
+unit uValidarCampos;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Buttons, ExtCtrls, FMTBcd, DBClient, Provider, DB, SqlExpr;
+
+type
+  TFrmValidarCampos = class(TForm)
+    Image1: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
+    lbCampos: TListBox;
+    Panel1: TPanel;
+    Botao_Ok: TBitBtn;
+    qry: TSQLQuery;
+    dsp: TDataSetProvider;
+    cds: TClientDataSet;
+    procedure Botao_OkClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    function validarCampos(cds: TClientDataSet; tabela: string): boolean;
+  end;
+
+var
+  FrmValidarCampos: TFrmValidarCampos;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmValidarCampos.Botao_OkClick(Sender: TObject);
+begin
+  Close;
+end;
+
+function TFrmValidarCampos.validarCampos(cds: TClientDataSet;
+  tabela: string): boolean;
+begin
+
+end;
+
+end.

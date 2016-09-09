@@ -1,0 +1,99 @@
+unit uCadastros;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Buttons, ExtCtrls, ComCtrls, FMTBcd, Provider, SqlExpr,
+  DBClient, DB, uBanco;
+
+type
+  TfrmCadastros = class(TForm)
+    sbMSG: TStatusBar;
+    pnlBotoes: TPanel;
+    Botao_Ajudar: TBitBtn;
+    Botao_Cancelar: TBitBtn;
+    Botao_Ok: TBitBtn;
+    pnlDados: TPanel;
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure Botao_CancelarClick(Sender: TObject);
+    procedure Botao_OkClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    procedure conectarBanco(conectar: boolean);
+  end;
+
+var
+  frmCadastros: TfrmCadastros;
+
+  // Variaveis de Conexao com banco de dados
+  cds_Cad: TClientDataSet;
+  ds_Cad: TDataSource;
+  dsp_Cad: TDataSetProvider;
+  qry_Cad: TSQLQuery;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCadastros.Botao_OkClick(Sender: TObject);
+begin
+  case Self.Tag of
+    ST_INSERT:
+      begin
+        cds_Cad.Insert;
+      end;
+
+    ST_EDIT:
+      begin
+        cds_Cad.Post;
+      end;
+
+    ST_DELETE:
+      begin
+        cds_Cad.Delete;
+      end;
+  end;
+  cds_Cad.Refresh;
+  Close;
+end;
+
+procedure TfrmCadastros.conectarBanco(conectar: boolean);
+begin
+  if conectar = True then
+  begin
+    qry_Cad := TSQLQuery.Create(Application);
+    dsp_Cad := TDataSetProvider.Create(Application);
+    cds_Cad := TClientDataSet.Create(Application);
+    ds_Cad := TDataSource.Create(Application);
+
+    dsp_Cad.DataSet := qry_Cad;
+    cds_Cad.ProviderName := dsp_Cad.Name;
+    ds_Cad.DataSet := cds_Cad;
+  end
+  else
+  begin
+    qry_Cad.Destroy;
+    dsp_Cad.Destroy;
+    cds_Cad.Destroy;
+    ds_Cad.Destroy;
+  end;
+end;
+
+procedure TfrmCadastros.Botao_CancelarClick(Sender: TObject);
+begin
+  if cds_Cad.State <> ST_VIEW then
+  begin
+    cds_Cad.Cancel;
+  end;
+  Close;
+end;
+
+procedure TfrmCadastros.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  if Key = #13 then
+    Key := #0;
+end;
+
+end.

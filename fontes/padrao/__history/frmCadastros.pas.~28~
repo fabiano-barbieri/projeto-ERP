@@ -1,0 +1,49 @@
+unit frmCadastros;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Buttons, ExtCtrls, ComCtrls, FMTBcd;
+
+type
+  TfrmCadastros = class(TForm)
+    sbMSG: TStatusBar;
+    pnlBotoes: TPanel;
+    Botao_Ajudar: TBitBtn;
+    Botao_Cancelar: TBitBtn;
+    Botao_Ok: TBitBtn;
+    pnlDados: TPanel;
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure Botao_CancelarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    procedure conectarBanco(status : boolean);
+  end;
+
+var
+  fCadastros: TfrmCadastros;
+
+
+implementation
+
+uses uFuncoes, uBanco;
+
+{$R *.dfm}
+
+procedure TfrmCadastros.Botao_CancelarClick(Sender: TObject);
+begin
+  if cds_Cad.State <> ST_VIEW then
+  begin
+    cds_Cad.Cancel;
+  end;
+
+end;
+
+procedure TfrmCadastros.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  if key =#13 then key:=#0;
+end;
+
+end.
