@@ -11,7 +11,7 @@ object dmodule: Tdmodule
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Firebird'
-      'Database=C:\ERP\projeto-ERP\base\BASE.GDB'
+      'Database='
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'

@@ -61,25 +61,25 @@
 				<Form>dmodule</Form>
 				<DesignClass>TDataModule</DesignClass>
 			</DCCReference>
-			<DCCReference Include="C:\ERP\fontes\padrao\forms\UAssistente_Filtro.pas">
+			<DCCReference Include="fontes\padrao\forms\UAssistente_Filtro.pas">
 				<Form>FrAssistenteFiltro</Form>
 			</DCCReference>
-			<DCCReference Include="C:\ERP\fontes\padrao\forms\uCadastros.pas">
+			<DCCReference Include="fontes\padrao\forms\uCadastros.pas">
 				<Form>frmCadastros</Form>
 			</DCCReference>
-			<DCCReference Include="C:\ERP\fontes\padrao\forms\uGrids.pas">
+			<DCCReference Include="fontes\padrao\forms\uGrids.pas">
 				<Form>frmGrids</Form>
 			</DCCReference>
-			<DCCReference Include="C:\ERP\fontes\padrao\forms\UMensagem.pas">
+			<DCCReference Include="fontes\padrao\forms\UMensagem.pas">
 				<Form>FrMensagem</Form>
 			</DCCReference>
-			<DCCReference Include="C:\ERP\fontes\padrao\forms\UMenu.pas">
+			<DCCReference Include="fontes\padrao\forms\UMenu.pas">
 				<Form>FrMenu</Form>
 			</DCCReference>
-			<DCCReference Include="C:\ERP\fontes\padrao\units\uBanco.pas"/>
-			<DCCReference Include="C:\ERP\fontes\padrao\units\uConst.pas"/>
-			<DCCReference Include="C:\ERP\fontes\padrao\units\uFuncoes.pas"/>
-			<DCCReference Include="C:\ERP\fontes\padrao\forms\uValidarCampos.pas">
+			<DCCReference Include="fontes\padrao\units\uBanco.pas"/>
+			<DCCReference Include="fontes\padrao\units\uConst.pas"/>
+			<DCCReference Include="fontes\padrao\units\uFuncoes.pas"/>
+			<DCCReference Include="fontes\padrao\forms\uValidarCampos.pas">
 				<Form>FrmValidarCampos</Form>
 			</DCCReference>
 			<BuildConfiguration Include="Release">
